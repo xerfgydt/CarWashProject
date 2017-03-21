@@ -19,18 +19,17 @@ public class CreditCard{
        
        
        
-    // public void buyWashCard(double price){
+    public void buyWashCard(int cardprice){
 
-    //     if(balanceCc - price >= 0){
-    //         balanceCc = balanceCc - price;
-    //         balanceWc = balanceWc + price;
-    //         System.out.print("Here is your WashCard");
-    //         System.out.print("The amount of money on this card is: " + balanceWc + "Kr");
-    //     }
-    //     else{
-    //         System.out.println("Insufficient gold");
-    //     } 
-    // }
+        if(balanceCc - cardprice >= 0){
+            balanceCc = balanceCc - cardprice;
+            System.out.print("Here is your WashCard ");
+            System.out.print("The amount of money on this card is: " + cardprice + " Kr");
+        }
+        else{
+            System.out.println("Insufficient gold");
+        } 
+    }
 
     // public void refillWashcard(double input){
     //         if(balanceCc - input >= 0){
