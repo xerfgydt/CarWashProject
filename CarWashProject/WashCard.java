@@ -10,7 +10,15 @@ public class WashCard{
         this.cardPrice = cardPrice;
 
     }
-
+    public void useWashcard(int carwashPrice){
+        if(carwashPrice <= balanceWc){
+            balanceWc = balanceWc - carwashPrice;
+        }
+        else{
+            System.out.println("insufficient");
+        }
+    }
+        
 
     public void setprice( int newCardPrice){
         if(newCardPrice < 1000 && newCardPrice > 200){
@@ -38,8 +46,8 @@ public class WashCard{
         System.out.println();
         System.out.println();
         System.out.println();
-        System.out.println();
-        System.out.println(balanceWc + " kr");
+        System.out.println("Washcard reciept");
+        System.out.println("Your balance on your washcard is now: " + balanceWc + " kr");
         return "" ;
     }
     

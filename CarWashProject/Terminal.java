@@ -11,13 +11,9 @@ public class Terminal{
        System.out.println("hello choose Options");
        System.out.println("");
        System.out.println("Buy a wash card (1)");
-       System.out.println("");
        System.out.println("Buy Car Wash (2)");
-       System.out.println("");
        System.out.println("Refill Wash Card (3)");
-       System.out.println("");
        System.out.println("Check Wash Card Balance (4)");
-       System.out.println("");
        System.out.println("Owner Options (5)");
        
        String optionChoice = System.console().readLine();
@@ -36,7 +32,7 @@ public class Terminal{
             System.out.println(" Do you want a Reciept? (y/n)");
             String printReciept = System.console().readLine();
             if(printReciept.equals("y")){
-            System.out.print(washcard1.printReciept());
+            washcard1.printReciept();
             System.out.println(date.toString());
             System.out.println("Have a Nice Day");
             }
@@ -57,10 +53,41 @@ public class Terminal{
 
        }
        else if(optionChoice.equals("2")){
-            System.out.println("Buy Car Wash Stuff");
+            System.out.println("You have chosen to buy a car wash");
+            System.out.println("Press 1 for goldwash the price is 150kr");
+            System.out.println("Press 2 for Silverwash the price is 100kr");
+            System.out.println("Press 3 for Bronzewash the price is 50kr");
+            String chooseWashtype = System.console().readLine();
+            if(chooseWashtype.equals("1")|| chooseWashtype.equals("2")|| chooseWashtype.equals("3")){
+                carwash1.setwashType(chooseWashtype);
+                carwash1.setprice(carwash1.getwashtype());
+                System.out.println("You have chosen " + carwash1.getwashtype());
+                System.out.println("Do you wish to confirm washtype(y/n)");
+                String confirmWashtype = System.console().readLine();
+                    if(confirmWashtype.equals("y")){
+                        washcard1.useWashcard(carwash1.getPrice());
+                        System.out.print("Do you want a reciept? (y/n)");
+                        String printReciept = System.console().readLine();
+                        if(printReciept.equals("y")){
+                        carwash1.printReciept();
+                        System.out.println(date.toString());
+                        System.out.println("Have a Nice Day");
+                        }
+                        else if(printReciept.equals("n")){
+                            System.out.println("Have a Nice Day");
+                        }
+                        else{
+                            System.out.println("YOU FAIL");
+                        }
+
+                    }
+            }
+
        }
        else if(optionChoice.equals("3")){
-            System.out.println("Refill wash card stuff");
+            System.out.println("You chose to refill your Washcard");
+            
+            
        }
        else if(optionChoice.equals("4")){
             System.out.println("Check card balance stuff");

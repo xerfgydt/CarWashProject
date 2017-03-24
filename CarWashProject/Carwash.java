@@ -1,10 +1,10 @@
 public class Carwash{
     private String statistics;
     private String washTypes;
-    private double price;
+    private int price;
     // private String date;
 
-    public Carwash(String washTypes,double price){
+    public Carwash(String washTypes,int price){
         this.washTypes = washTypes;
         this.price = price;
         // this.date = date;
@@ -38,12 +38,15 @@ public class Carwash{
            else if(newPrice.equals("BronzeWash")){
                price = 50;
            }
+        else{
+            System.out.println("kijgh");
+        }
     }
 
-    public double getPrice(){
+    public int getPrice(){
         return price;
     }
-    public String printReciept(){
+    public void printReciept(){
         System.out.println();
         System.out.println();
         System.out.println();
@@ -52,8 +55,7 @@ public class Carwash{
         System.out.println();
         System.out.println();
         System.out.println(washTypes);
-        System.out.print(price);
-        return "" ;
+        System.out.println(price);
     }
 
 
