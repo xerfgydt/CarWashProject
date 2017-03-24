@@ -6,4 +6,11 @@ public class Owner{
         this.ownerName = ownerName;
         this.ownerCode = ownerCode;
     }
+
+    public String getOwnername(){
+        return this.ownerName;
+    }
+    public String getOwnerCode(){
+        return this.ownerCode;
+    }
 }

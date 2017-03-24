@@ -18,10 +18,19 @@ public class WashCard{
             System.out.println("insufficient");
         }
     }
+    public void refillWashcard(int input){
+            if(balanceWc + input <= 1000 ){
+            balanceWc = balanceWc + input;
+            System.out.print("The amount of money on this card has been changed to: " + balanceWc + "Kr");
+        }
+        else{
+            System.out.println("Insufficient gold");
+    }
+    }
         
 
     public void setprice( int newCardPrice){
-        if(newCardPrice < 1000 && newCardPrice > 200){
+        if(newCardPrice <= 1000 && newCardPrice >= 200){
             cardPrice = newCardPrice;
             balanceWc = newCardPrice;
             
@@ -31,6 +40,7 @@ public class WashCard{
         }
  
     }
+    
 
     public int getCardPrice(){
         return cardPrice;
@@ -39,16 +49,16 @@ public class WashCard{
     public int getBalanceWc(){
         return balanceWc;
     }
-    public String printReciept(){
+    public void printReciept(String input){
         System.out.println();
         System.out.println();
         System.out.println();
         System.out.println();
         System.out.println();
         System.out.println();
-        System.out.println("Washcard reciept");
+        System.out.println(input);
         System.out.println("Your balance on your washcard is now: " + balanceWc + " kr");
-        return "" ;
+       
     }
-    
+  
 }

@@ -31,15 +31,7 @@ public class CreditCard{
         } 
     }
 
-    // public void refillWashcard(double input){
-    //         if(balanceCc - input >= 0){
-    //         balanceWc = balanceWc + input;
-    //         System.out.print("The amount of money on this card has been changed to: " + balanceWc + "Kr");
-    //     }
-    //     else{
-    //         System.out.println("Insufficient gold");
-    // }
-    // }
+
 
 
 }

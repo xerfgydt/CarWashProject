@@ -1,5 +1,7 @@
+import java.util.ArrayList;
+
 public class Carwash{
-    private String statistics;
+    ArrayList<Carwash> statistics = new ArrayList<Carwash>();
     private String washTypes;
     private int price;
     // private String date;
@@ -58,7 +60,19 @@ public class Carwash{
         System.out.println(price);
     }
 
+public String toString(){
+    return "Washtype: " + washTypes + ", price: " + price;
+}
 
+public void addCarwash(Carwash c){
+    statistics.add(c);
+}
+
+public void printStatistic(){
+    for(int i = 0; i < statistics.size(); i++){
+        System.out.println(statistics.get(i));
+    }
+}
 
 
 }
