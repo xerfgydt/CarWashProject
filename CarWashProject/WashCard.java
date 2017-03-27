@@ -15,7 +15,7 @@ public class WashCard{
             balanceWc = balanceWc - carwashPrice;
         }
         else{
-            System.out.println("insufficient");
+            System.out.println("Insufficient funds");
         }
     }
     public void refillWashcard(int input){
@@ -51,11 +51,7 @@ public class WashCard{
     }
     public void printReciept(String input){
         System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        System.out.println("________________");
         System.out.println(input);
         System.out.println("Your balance on your washcard is now: " + balanceWc + " kr");
        

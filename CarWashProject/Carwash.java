@@ -32,13 +32,13 @@ public class Carwash{
 
    public void setprice(String newPrice){
        if(newPrice.equals("GoldWash")){
-           price = 150;
+           price = 300;
            }
            else if(newPrice.equals("SilverWash")){
-               price = 100;
+               price = 250;
            }
            else if(newPrice.equals("BronzeWash")){
-               price = 50;
+               price = 200;
            }
         else{
             System.out.println("kijgh");
@@ -50,14 +50,9 @@ public class Carwash{
     }
     public void printReciept(){
         System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println(washTypes);
-        System.out.println(price);
+        System.out.println("___________________");
+        System.out.println("Type of Wash: " + washTypes);
+        System.out.println("the price was: " + price + "kr");
     }
 
 public String toString(){

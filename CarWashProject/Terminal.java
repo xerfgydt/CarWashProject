@@ -48,16 +48,19 @@ public class Terminal{
         carwash1.addCarwash(carwash19);
         
        
-       
+       for(int i=0 ; i <1 ; ){
        
        // START MENU 
-       System.out.println("Hello choose Options");
-       System.out.println("");
-       System.out.println("Buy a wash card (1)");
-       System.out.println("Buy Car Wash (2)");
-       System.out.println("Refill Wash Card (3)");
-       System.out.println("Check Wash Card Balance (4)");
-       System.out.println("Owner Options (5)");
+        System.out.println("");
+        System.out.println("Main Menu: Choose one of the following Options");
+        System.out.println("");
+        System.out.println("Buy a wash card (1)");
+        System.out.println("Buy Car Wash (2)");
+        System.out.println("Refill Wash Card (3)");
+        System.out.println("Check Wash Card Balance (4)");
+        System.out.println("Owner Options (5)");
+        System.out.println("Quit (6)");
+       
        
        String optionChoice = System.console().readLine();
 
@@ -78,9 +81,10 @@ public class Terminal{
                     System.out.println(" Do you want a Reciept? (y/n)");
                     String printReciept = System.console().readLine();
                     if(printReciept.equals("y")){
-                        washcard1.printReciept("this is your reciept");
+                        washcard1.printReciept("This is your reciept");
                         System.out.println(date.toString());
                         System.out.println("Have a Nice Day");
+                        System.out.println("_________________");
                     }
                     else if(printReciept.equals("n")){
                         System.out.println("Have a Nice Day");
@@ -106,9 +110,9 @@ public class Terminal{
        // 2.OPTION: BUY A CAR WASH
        else if(optionChoice.equals("2")){
             System.out.println("You have chosen to buy a car wash");
-            System.out.println("Press 1 for goldwash the price is 150kr");
-            System.out.println("Press 2 for Silverwash the price is 100kr");
-            System.out.println("Press 3 for Bronzewash the price is 50kr");
+            System.out.println("Press 1 for goldwash the price is 300kr");
+            System.out.println("Press 2 for Silverwash the price is 250kr");
+            System.out.println("Press 3 for Bronzewash the price is 200kr");
             String chooseWashtype = System.console().readLine();
             if(chooseWashtype.equals("1")|| chooseWashtype.equals("2")|| chooseWashtype.equals("3")){
                 carwash1.setwashType(chooseWashtype);
@@ -124,6 +128,7 @@ public class Terminal{
                                 carwash1.printReciept();
                                 System.out.println(date.toString());
                                 System.out.println("Have a Nice Day");
+                                System.out.println("_________________");
                             }
                             else if(printReciept.equals("n")){
                             System.out.println("Have a Nice Day");
@@ -153,9 +158,10 @@ public class Terminal{
                             System.out.println(" Do you want a reciept? (y/n)");
                             String confirmReciept = System.console().readLine();
                                 if(confirmReciept.equals("y")){
-                                washcard1.printReciept("this is your reciept");
+                                washcard1.printReciept("This is your reciept");
                                 System.out.println(date.toString());
                                 System.out.println("Have a Nice Day");
+                                System.out.println("_________________");
                                 }
                                 else if(confirmReciept.equals("n")){
                                     System.out.println("Have a nice day");
@@ -185,6 +191,7 @@ public class Terminal{
             System.out.println("You have chosen to check your washcard balance");
             washcard1.printReciept(" ");
             System.out.println();
+            System.out.println("_________________");
        }
 
        // 5.OPTION OWNER CHECKS STATISTICS:
@@ -201,8 +208,14 @@ public class Terminal{
                     System.out.println("Either your code or username was incorrect");
                 }
        }
+
+// 6.OPTION TERMINATE:
+       else if(optionChoice.equals("6")){
+           i = i+1;
+       }
        else{
-           System.out.println("You need to choose between option 1-5 ");
+           System.out.println("You need to choose between option 1-6 ");
+       }
        }
 
 
