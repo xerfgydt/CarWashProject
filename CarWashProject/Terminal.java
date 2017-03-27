@@ -6,7 +6,7 @@ public class Terminal{
         Owner o = new Owner("Palle", "65");
         Customer customer1 = new Customer("Rasmus","Pallesen",12345678,true);
         CreditCard creditcard1 = new CreditCard("abc123", 5000);
-        WashCard washcard1 = new WashCard("123abc", 341, 0);
+        WashCard washcard1 = new WashCard("123abc", 0, 0);
         // objekter til vores statistic
         Carwash carwash1 = new Carwash("", 0);
         Carwash carwash2 = new Carwash("Goldwash", 150);
@@ -181,13 +181,14 @@ public class Terminal{
 
        // 4.OPTION: CHECK WASHCARD BALANCE
 
-
-
        else if(optionChoice.equals("4")){
             System.out.println("You have chosen to check your washcard balance");
             washcard1.printReciept(" ");
             System.out.println();
        }
+
+       // 5.OPTION OWNER CHECKS STATISTICS:
+
        else if(optionChoice.equals("5")){
             System.out.print("please insert your Username:");
             String userName = System.console().readLine();
